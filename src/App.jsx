@@ -6,6 +6,7 @@ import ServicesPage from '@/pages/ServicesPage';
 import PortfolioPage from '@/pages/PortfolioPage';
 import AboutPage from '@/pages/AboutPage';
 import ContactPage from '@/pages/ContactPage';
+import BlockPage from '@/pages/BlockPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/portafolio" element={<PortfolioPage />} />
           <Route path="/sobre-mi" element={<AboutPage />} />
           <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/block/:id" element={<BlockPage />} />
         </Routes>
       </AnimatePresence>
     </Router>

@@ -1,60 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --radius: 0.5rem;
+    /* 🎨 Fondo Principal INTENSO: Un beige arena más marcado (en lugar de marfil claro) */
+    --background: 35 35% 91%;      /* #ECE3D5 */
+    /* ☕ Texto Principal Espresso Puro: Más oscuro y contrastado */
+    --foreground: 16 25% 15%;      /* #2F221D */
+
+    /* Tarjetas y Menús: Marfil sutil para que contrasten limpio sobre el fondo arena */
+    --card: 38 40% 97%;            /* #FAF6F0 */
+    --card-foreground: 16 25% 15%;
+    --popover: 38 40% 97%;
+    --popover-foreground: 16 25% 15%;
+
+    /* Botones y Elementos Fuertes: Espresso Oscuro Intenso */
+    --primary: 16 25% 15%;         /* #2F221D */
+    --primary-foreground: 38 40% 97%;
+
+    /* Tonos intermedios (Warm Taupe): Un beige tostado con presencia */
+    --secondary: 33 28% 78%;       /* #D0BEAA */
+    --secondary-foreground: 16 25% 15%;
+
+    /* Detalles Decorativos (Muted Gold): Oro bronce más vivo y metálico */
+    --accent: 34 35% 55%;          /* #B5946B */
+    --accent-foreground: 38 40% 97%;
+
+    /* Estados atenuados */
+    --muted: 33 20% 84%;
+    --muted-foreground: 16 15% 38%;
+
+    /* Bordes bien definidos en tono bronce suave */
+    --border: 33 25% 78%;  
 }
 
 * {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    /* Esto asegura que todos los bordes usen tu nuevo color beige de las fotos */
+    border-color: hsl(var(--border));
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
-  background: linear-gradient(135deg, #FFF8F3 0%, #FFD7E8 25%, #D4E4F7 50%, #D4F1E8 75%, #E8D4F1 100%);
-  background-attachment: fixed;
-  color: #2c2c2c;
+    font-family: 'Outfit', sans-serif;
+    /* 🎨 CAMBIO: Eliminamos el degradado de colores y ponemos el Ivory sólido de la foto */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+/* 🖋️ CAMBIO: Títulos con la fuente Serif elegante de las imágenes */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
+h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✨ EFECTO GLASS: Ahora adaptado a tonos crema/oro */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(197, 168, 128, 0.2); /* Borde con toque oro mate */
 }
 
+/* 🏆 GRADIENTE PREMIUM: Sustituye a los pasteles por un degradado de seda */
 .gradient-pastel {
-  background: linear-gradient(135deg, #FFD7E8 0%, #D4E4F7 50%, #E8D4F1 100%);
+    background: linear-gradient(135deg, #F9F6F0 0%, #EADBC8 50%, #DAC0A3 100%);
 }
 
+/* 🖋️ TEXTO GRADIENTE: De Espresso Brown a Oro Mate */
 .gradient-text {
-  background: linear-gradient(135deg, #FF6B9D 0%, #6B9FFF 50%, #B76BFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    background: linear-gradient(135deg, #3E322D 0%, #C5A880 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
