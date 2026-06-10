@@ -81,7 +81,7 @@ function ContactPage() {
       icon: Phone,
       title: 'WhatsApp',
       content: '+34 692 340 099',
-      link: 'https://wa.me/15551234567',
+      link: 'https://wa.me/34692340099?text=Hola, quiero consultar sobre un proyecto web.',
     },
     {
       icon: MapPin,
