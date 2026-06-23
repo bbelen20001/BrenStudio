@@ -35,9 +35,9 @@ const PROJECTS_DATA = [
     image: '/dake-experience.jpg', 
     technologies: ['React', 'TailwindCSS', 'Express', 'MongoDB'],
     category: 'Design',
-    images: ['/dake-captura1.jpg', '/dake-captura2.jpg']
+    images: ['/dake-captura1.jpeg', '/dake-captura2.jpeg', '/dake-captura3.jpeg']
   },
-  {
+  { 
     id: 4,
     title: 'Trocar - Marketplace Móvil',
     description: 'Aplicación web móvil de economía colaborativa para artesanos y comercio local. Incluye carrito, gestión de tiendas express, agenda de eventos y feedback dinámico.',
@@ -45,7 +45,7 @@ const PROJECTS_DATA = [
      video: '/top.mp4',
     technologies: ['React', 'Firebase', 'Redux', 'TailwindCSS'], 
     category: 'Web', 
-    images: ['/tops2.jpeg',]
+    images: ['/tops2.jpeg', '/tops3.jpeg', '/tops4.jpeg']
   },
   {
     id: 5,
@@ -156,17 +156,19 @@ function BlockPage() {
             >
               {/* Prioridad al Video si existe, sino Imagen de Portada */}
               {project.video ? (
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-black aspect-video flex items-center justify-center">
-                  <video
-                    src={project.video}
-                    className="w-full h-full object-contain"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  >
-                    Tu navegador no soporta la reproducción de videos.
-                  </video>
-                </div>
+         <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-black w-full max-w-sm mx-auto aspect-[9/16] flex items-center justify-center">
+  <video
+    src={project.video}
+    className="w-full h-full object-cover"
+    controls
+    playsInline
+    preload="metadata"
+    loop
+    muted
+  >
+    Tu navegador no soporta la reproducción de videos.
+  </video>
+</div>
               ) : (
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
                   <img 
