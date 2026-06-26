@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import MainLayout from '@/layouts/MainLayout';
 import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ProjectCard';
+import { Link } from 'react-router-dom';
 
 function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -144,16 +145,16 @@ function PortfolioPage() {
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                 Hablemos sobre tu proyecto y cómo podemos ayudarte a alcanzar tus objetivos.
               </p>
-              <a href="/contacto">
-                <motion.button
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-semibold shadow-lg"
-                  whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Iniciar un Proyecto
-                </motion.button>
-              </a>
-            </motion.div>
+           <Link to="/contacto">
+    <motion.button
+      className="px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-semibold shadow-lg"
+      whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }}
+      whileTap={{ scale: 0.95 }}
+    >
+      Iniciar un Proyecto
+    </motion.button>
+  </Link>
+</motion.div>
           </div>
         </div>
       </div>
